@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "USACO Language Selector",
+  "name": "PowerSchool Grade Percentage Viewer",
   "version": "0.1.0",
-  "description": "Saves time by automatically changes language selection on the USACO interface to a predefined value.",
+  "description": "Shows weighted grade values in percentages.",
   "icons": {"128": "icon.png"},
 
 
     "content_scripts": [{
 	"js": ["background.js"],
-	"matches": ["https://powerschool.newcanaan.k12.ct.us/*/scores.html"]
+	"matches": ["https://*.powerschool.newcanaan.k12.ct.us/*"]
     }],
     "action": {
 	"default_popup": "index.html",
