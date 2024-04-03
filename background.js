@@ -1,4 +1,5 @@
 setInterval(()=>{
+try{
 let quarter = document.querySelector("table.linkDescList").children[0].children[1].children[3].innerText;
 let weights = document.querySelector("table.tablesorter.grid").children[1].children;
 let currentWeight = {}
@@ -41,4 +42,5 @@ for (let assignment of gradetable.children[1].children){
 }
 
 document.querySelector("table.linkDescList").children[0].children[1].children[4].innerText = document.querySelector("table.linkDescList").children[0].children[1].children[4].innerText.split("\n")[0] + `\n[${~~(totalGrade[0]/totalGrade[1]*1000)/10}/100]`;
+}catch(e){console.log(e)}
 }, 1000);
