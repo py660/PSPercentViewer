@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
   "name": "PowerSchool Grade Percentage Viewer",
-  "version": "0.2.0",
-  "description": "Shows weighted grade values in percentages.",
+    "version": "0.2.0",
+    "description": "Shows weighted grade values in percentages.",
+    "update_url": "https://py660.github.io/PSPercentViewer/update.xml",
   "icons": {"128": "icon.png"},
 
 
