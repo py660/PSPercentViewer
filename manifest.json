@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "USACO Language Selector",
+  "version": "0.1.0",
+  "description": "Saves time by automatically changes language selection on the USACO interface to a predefined value.",
+  "icons": {"128": "icon.png"},
+
+
+    "content_scripts": [{
+	"js": ["background.js"],
+	"matches": ["https://powerschool.newcanaan.k12.ct.us/*/scores.html"]
+    }],
+    "action": {
+	"default_popup": "index.html",
+	"default_icon": "icon.png"
+    }
+}
