@@ -1,4 +1,4 @@
-# Version 3 - Installation
+# Version 0.3.0 - Installation
 
 ## Website
 https://py660.github.io/PSPercentViewer/
