@@ -88,6 +88,9 @@ async function activate(){
                 }
                 //console.log(assignment.children[10].children[0].innerText.split("\n"))
                 let score = parseFloat(scoreStr[0])/parseInt(scoreStr[1]);
+                if (isNaN(score)){
+                    continue;
+                }
                 totalGrade[0] += ~~(weight*score*10)/10;
                 totalGrade[1] += weight;
                 console.log(~~(weight * score *10)/10 + "/" + weight);
