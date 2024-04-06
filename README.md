@@ -1,4 +1,15 @@
-# Google's Crappy Paywall
+
+# Installation
+## Website
+
+https://py660.github.io/PSPercentViewer/
+
+## Bookmarklet
+```
+javascript:(function(){window.s0=document.createElement('script');window.s0.setAttribute('type','text/javascript');window.s0.setAttribute('src','https://bookmarkify.it/bookmarklets/64764/raw');document.getElementsByTagName('body')[0].appendChild(window.s0);})();
+```
+
+## Extension
 Due to Google Chrome's mandated $5 fee for developers, you will have to use developer mode for the time being.
 1. Download this repository as a zip
 3. Go to chrome://extensions

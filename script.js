@@ -29,8 +29,22 @@ async function activate(){
         console.log(converted);
         win.document.documentElement.innerHTML = converted.window.document.documentElement.innerHTML.replace('screen.css', 'https://powerschool.newcanaan.k12.ct.us/images/css/screen.css').replace('../../', 'https://powerschool.newcanaan.k12.ct.us/');
         console.log(win);
-        win.window.onload = ()=>{console.log("bye");alert("hi"); win.document.body.style.lineHeight="2em !important"};
-        console.log(win.window.onload);
+        if (document.readyState === "complete"){
+            console.log("Already loaded.");
+            let tag = win.document.createElement('style');
+            tag.innerHTML = 'table { font-size: 1.2em; line-height: 1.2em !important; }';
+            win.document.head.appendChild(tag);
+            console.log(tag);
+        }
+        else{
+            console.log("Not loaded yet. Here's our chance.")
+            win.window.onload = ()=>{
+                let tag = win.document.createElement('style');
+                tag.innerHTML = '* { line-height: 1.5em !important; }';
+                win.document.head.appendChild(tag);
+            };
+            console.log(win.window.onload);
+        }
         
         let interval = setInterval(()=>{
         try{
