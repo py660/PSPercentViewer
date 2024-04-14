@@ -21,13 +21,13 @@ function getContent(){
 }
 async function activate(){
     try{
-        let content = await getContent();//.replace('href="/', 'href="https://powerschool.newcanaan.k12.ct.us/').replace('src="/', 'src="https://powerschool.newcanaan.k12.ct.us/');
+        let content = await getContent();
         console.log(content);
         let win = window.open("");
         console.log(mhtml2html);
         let converted =  mhtml2html.convert(content);
         console.log(converted);
-        win.document.documentElement.innerHTML = converted.window.document.documentElement.innerHTML.replace('screen.css', 'https://powerschool.newcanaan.k12.ct.us/images/css/screen.css').replace('../../', 'https://powerschool.newcanaan.k12.ct.us/');
+        win.document.documentElement.innerHTML = converted.window.document.documentElement.innerHTML.replace('screen.css', window.location.href + 'screen.css');
         console.log(win);
         if (document.readyState === "complete"){
             console.log("Already loaded.");
