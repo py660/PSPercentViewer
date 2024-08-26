@@ -4,7 +4,7 @@
       "version": "0.2.0",
       "description": "Shows weighted grade values in percentages.",
       "update_url": "https://py660.github.io/PSPercentViewer/update.xml",
-    "icons": {"128": "icon.png"},
+    "icons": {"48": "icon48.png", "96": "icon96.png", "128": "icon.png"},
   
   
       "content_scripts": [{
